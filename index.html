@@ -139,7 +139,7 @@
         },2000);
  
         function getMyAdda(){
-            $.get("http://ip-api.com/json", function(respObj, status){
+            $.get("https://freegeoip.app/json/", function(respObj, status){
                 var data = respObj;
                 var city = data.city;
                 document.getElementById('response').innerText = city;
