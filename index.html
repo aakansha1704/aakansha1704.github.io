@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anithe</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+       
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mainhpc.css">
+    <link rel="stylesheet" href="resphp.css">
+   
+  </head>
+  <body>
+    
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="anithe.jpeg">
+        </div>
+         
+        <span class="fa fa-bars menu-icon"></span>
+        <div class="header-right">
+          <a href="#">Themes</a>
+          <a href="#">Genres</a>
+          <a href="#" class="login">About us</a>
+        </div>
+      </div>
+    </header>
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>WELCOME TO ANITHE</h1>
+        <h1>Your one stop to theme based sorted shows</h1>
+        <p>The shows here are handpicked by the developers.</p>
+        <p>Helping you push boredom away with a unique arrangement of suggestions.</p>
+        <div class="message-wrapper">
+            <div class="container">
+              
+              
+              
+              <span class="btn message">Get started</span>
+            </div>
+          </div>
+        <!-- <div class="btn-wrapper">
+          <a href="#" class="btn signup">Sign up with Email</a>
+          <p>or</p>
+          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Sign up with Facebook</a>
+          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Sign up with Twitter</a> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Choose the theme that appeals to you</h2>
+        </div>
+        <div class="lessons">
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://cache.desktopnexus.com/thumbseg/2152/2152634-bigthumbnail.jpg" width="250" height="250">
+              <p class="timg">Serene delusion</p>
+            </div>
+            <p class="text-contents">Sometimes serene moments are followed by dark encounters which leave one baffled. The calm before the storm.</p>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://i.pinimg.com/originals/0a/4f/04/0a4f0489d608e08fc33bf320208a72a9.jpg" width="250" height="250">
+              <p class="timg">Springtime of life</p>
+            </div>
+            <p class="text-contents">The time filled with experiences that build the foundation for the seasons of our lives.</p>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://wallpapercave.com/wp/wp5475508.jpg" width="250" height="250">
+              <p class="timg">Nightly wonders</p>
+            </div>
+            <p class="text-contents">Among the silent glow of celestial bodies, occur many wonders that are either a dream or a nightmare.</p>
+          </div>
+          <div class="lesson">
+            <div class="lesson-icon">
+              <img src="https://lh3.googleusercontent.com/proxy/hZX5Syhs0utX7Quw1tpzwzcz7EcdRjQ5xxIBn6pGiJEIOLR88f1gQjN6RBmGME0OT_uK58pp_iUckaL_S27gckuYahFz3gE91G4lSSjlbmJrbmClvra_UBKoY3hnc8CTGQNXrZLfOQA" width="250" height="250">
+              <p class="timg">Otherworldly fate</p>
+            </div>
+            <p class="text-contents">Mysterious worlds keep away from one's sight. But sometimes, a person's fate might push them to the well kept secrets.</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="message-wrapper">
+    <h1>
+        Shows for you
+    </h1>
+    <div class="container">
+        <div class="popup-content">
+ 
+            <div id="suggestYes" style="display: none;">
+                <div id="basicText">
+                    <h2>I see you're from <span id="response"></span>!</h2>
+                    <!-- <p> -->
+                        <h2>Things you might be interested in:</h2>
+                        <div class="locsug">
+                          <p>DBZ</p>
+                          <p>BLEACH</p>
+                          <p>AOT</p>
+                          <p>FREE</p>
+                      </div>
+                    <!-- </p> -->
+                </div>
+            </div>
+            <div id="suggestNo" style="display: none;">
+                <div id="basicText">
+                    <p>
+                        <h2>Things people love on our site:</h2>
+                        <div class="locsug">
+                            <p>Boruto</p>
+                            <p>LMAO</p>
+                            <p>ROFL</p>
+                            <p>GOT</p>
+                        </div>
+                    </p>
+                </div>
+            </div>
+ 
+        </div>
+ 
+    </div>
+    <script>
+        setTimeout(function(){
+            if (confirm("Would you like us to suggest based on your location?")) {
+                getMyAdda();
+                $('#suggestYes').show();
+                $('#suggestNo').hide();
+            } else {
+                $('#suggestYes').hide();
+                $('#suggestNo').show();        
+            }
+        },2000);
+ 
+        function getMyAdda(){
+            $.get("http://ip-api.com/json", function(respObj, status){
+                var data = respObj;
+                var city = data.city;
+                document.getElementById('response').innerText = city;
+            });
+        }
+    </script>
+
+      
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <img src="anithe.jpeg">
+        <span>A new perspective</span>
+      </div>
+    </footer>
+  </body>
+</html>
