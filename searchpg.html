@@ -95,21 +95,27 @@
     </div>
     <script>
         setTimeout(function(){
-          if(!localStorage.usedSuggestions){
+          if(!localStorage.userSuggestions){
               if (confirm("Would you like us to suggest based on your location?")) {
                   getMyAdda();
                   $('#suggestYes').show();
                   $('#suggestNo').hide();
-                  localStorage.setItem("usedSuggestions","location");
+                  localStorage.setItem("userSuggestions","location");
               } else {
                   $('#suggestYes').hide();
                   $('#suggestNo').show();    
-                  localStorage.setItem("usedSuggestions","none");
+                  localStorage.setItem("userSuggestions","none");
               }
             }
             else{
-              if(localStorage.getItem("usedSuggestions") === "location"){
+              if(localStorage.getItem("userSuggestions") === "location"){
+                $('#suggestYes').show();
+                $('#suggestNo').hide();
                 document.getElementById('response').innerText = localStorage.getItem("userLocation");
+              }
+              else{
+                $('#suggestYes').hide();
+                $('#suggestNo').show();                  	
               }
             }
         },2000);
