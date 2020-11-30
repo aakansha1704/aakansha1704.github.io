@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime yay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.1/chosen.min.css" integrity="sha512-cH2Lt8yDAKVXFEb3I3GGTFnBKg8nY5eIfw/coyOSByZ8+0Rpz/Z8veEIFNg43w3tlBZaZJsGTuDByv9tQaWR7A==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" integrity="sha512-qzrZqY/kMVCEYeu/gCm8U2800Wz++LTGK4pitW/iswpCbjwxhsmUwleL1YXaHImptCHG0vJwU7Ly7ROw3ZQoww==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.1/chosen.jquery.min.js" integrity="sha512-QoULJ4uIIDaZkjZCtci0AJsEpawlknypMKYiaPNUkIwB0xI5sIxh51Gyasr7Kv2WZW9JpLC2U3g2QtavWP2WwA==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>
+        Yay!
+    </h1>
+    <select class="chosen-genre" data-placeholder="Choose nonsense shit" style="width:350px;" tabindex="1">
+        <option value=""></option>
+        <optgroup label="Serene Delusion">
+            <option>Nagi no asu kara</option>
+            <option>Angel Beats!</option>
+            <option>Black Clover</option>
+            <option>Black Bullet</option>
+            <option>Erased</option>
+            <option>Noragami</option>
+            <option>Kuroshitsuji</option>
+            <option>Puella Magi Madoka Magica</option>
+            <option>Kimetsu no Yaiba</option>
+            <option>One punch man</option>
+           
+        </optgroup>
+        <optgroup label="Genre2">
+            <option>lol2</option>
+            <option>lmao2</option>
+            <option>rofl2</option>
+            <option>lmfao2</option>
+        </optgroup>
+        <optgroup label="Genre3">
+            <option>lol3</option>
+            <option>lmao3</option>
+            <option>rofl3</option>
+            <option>lmfao3</option>
+        </optgroup>
+        <optgroup label="Genre4">
+            <option>lol4</option>
+            <option>lmao4</option>
+            <option>rofl4</option>
+            <option>lmfao4</option>
+        </optgroup>                        
+    </select>    
+    <!-- <div class="container">
+        <div class="popup-content">
+
+            <div id="suggestYes" style="display: none;">
+                <div id="basicText">
+                    <p>I see you're from <span id="response"></span>!!</p>
+                    <p>
+                        Things you might be interested in:
+                        <ul id="animeList">
+                            <li>Naruto</li>
+                            <li>Bleach</li>
+                            <li>Free</li>
+                            <li>AOT</li>
+                            <li>LOL</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="suggestNo" style="display: none;">
+                <div id="basicText">
+                    <p>
+                        Things people love on our site:
+                        <ul id="animeList">
+                            <li>Boruto</li>
+                            <li>LMAO</li>
+                            <li>ROFL</li>
+                            <li>GOT</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+    <script>
+        $(".chosen-genre").chosen();
+        
+        //Handling for what to do when an option is selected
+        $(".chosen-genre").on("change", function(event){
+            //Value the user has selected from the drop down
+            var selectedAnime = event.target.value;
+            alert(selectedAnime);
+            window.location.href = "https://aakansha1704.github.io/shows/" + selectedAnime;
+        });
+        
+    </script>
+</body>
+</html>
