@@ -8,9 +8,7 @@ h1, h2, h3, h4, h5, h6, p, div {
   margin: 0;
   padding: 0;
 }
-img{
-    border-radius: 50%;
-}
+
 body {
 
   font-family: "Lucida Grande";
@@ -19,7 +17,9 @@ body {
 a {
   text-decoration: none;
 }
-
+.imgt{
+  border-radius: 50%;
+}
 .clear {
   clear: left;
 }
@@ -135,6 +135,7 @@ header {
 
 .up-icon {
   position: relative;
+  
 }
 
 .up-icon p {
