@@ -121,7 +121,7 @@ header {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.lesson-wrapper {
+.up-wrapper {
   padding-bottom: 80px;
   padding-left: 5%;
   padding-right: 5%;
@@ -139,16 +139,16 @@ header {
   font-weight: normal;
 }
 
-.lesson {
+.up {
   float: left;
   width: 25%;
 }
 
-.lesson-icon {
+.up-icon {
   position: relative;
 }
 
-.lesson-icon p {
+.up-icon p {
   position: absolute;
   top: 44%;
   width: 100%;
@@ -165,7 +165,7 @@ header {
 .timg{
     font-size: 20px;
     font-weight: bold;
-    text-shadow: 2.5px 2px #000000;
+    text-shadow: 0.5px 0.5px 1px #000000;
 }
 
 .heading h3 {
@@ -180,15 +180,18 @@ header {
 }
 
 .message {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0.2px 0.2px #140f1d;
   padding: 15px 40px;
-  background-color: #5dca88;
+  background-color: #140f1d;
   cursor: pointer;
-  box-shadow: 0 7px #1a7940;
+  box-shadow: 0 7px #221e29;
 }
 
 .message:active {
   position: relative;
-  top: 7px;
+  top: 5px;
   box-shadow: none;
 }
 
@@ -214,6 +217,7 @@ footer span {
 
 }
 
+<<<<<<< Updated upstream
 .menu-icon {
   color: white;
   float: right;
@@ -221,3 +225,5 @@ footer span {
   padding: 21px 0;
   display: none;
 }
+=======
+>>>>>>> Stashed changes
