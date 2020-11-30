@@ -46,7 +46,7 @@
             <option>lmfao4</option>
         </optgroup>                        
     </select>    
-    <div class="container">
+    <!-- <div class="container">
         <div class="popup-content">
 
             <div id="suggestYes" style="display: none;">
@@ -80,19 +80,8 @@
 
         </div>
 
-    </div>
+    </div> -->
     <script>
-        setTimeout(function(){
-            if (confirm("Would you like us to suggest based on your location?")) {
-                getMyAdda();
-                $('#suggestYes').show();
-                $('#suggestNo').hide();
-            } else {
-                $('#suggestYes').hide();
-                $('#suggestNo').show();        
-            }
-        },2000);
-
         $(".chosen-genre").chosen();
         
         //Handling for what to do when an option is selected
@@ -103,13 +92,6 @@
             window.location.href = "https://aakansha1704.github.io/shows/" + selectedAnime;
         });
         
-        function getMyAdda(){
-            $.get("http://ip-api.com/json", function(respObj, status){
-                var data = respObj;
-                var city = data.city;
-                document.getElementById('response').innerText = city;
-            });
-        }
     </script>
 </body>
 </html>
