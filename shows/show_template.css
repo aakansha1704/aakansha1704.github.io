@@ -5,6 +5,7 @@
 .mainpage
 {
     box-sizing: border-box;
+    float:left;
 }
 
 .col-1
