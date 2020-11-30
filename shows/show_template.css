@@ -1,0 +1,52 @@
+
+.twt{
+    margin-left:22%;
+}
+.mainpage
+{
+    box-sizing: border-box;
+}
+
+.col-1
+{
+    float:left;
+    margin-left:16px;
+    width:17%;
+    font-weight: bolder;
+    margin-top:10px;
+    text-shadow: 0px 0px 1px #000000;
+    color:rgb(68, 21, 155);
+    text-transform: uppercase;
+}
+
+
+
+#details
+{
+    font-size: 17px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal;
+    text-shadow: 0px 0px 1px #00000073;
+    color:black;
+}
+
+.col-2
+{
+    float:left;
+    width:45%;
+    margin-left:25px;
+    font-weight:bolder;
+    text-align:justify;
+    text-shadow: 0px 0px 0.1px #000000;
+    color:rgb(68, 21, 155);
+}
+
+.col-3
+{
+    text-transform: uppercase;
+    float:left;
+    width:25%;
+    font-weight:bold;
+    margin-left:25px;
+    margin-top:10px;
+}
