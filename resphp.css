@@ -22,6 +22,9 @@
   .menu-icon {
     display: block;
   }
+  .logo{
+    margin-left: -75px;
+  }
 
   .btn {
     width: 100%;
