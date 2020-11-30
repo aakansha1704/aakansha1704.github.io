@@ -92,9 +92,11 @@ header {
 }
 
 .logo {
-  width: 200px;
-  height: 150px;
-  margin-top: 1px;
+  width: 290px;
+  margin-top: -15px;
+  padding-bottom: 40px;
+  margin-left:-150px;
+  
 }
 
 .header-left {
