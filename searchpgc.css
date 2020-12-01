@@ -16,6 +16,11 @@ padding-top: 100px;
 .intro h2{
     font: size 40px;
 }
+.popup-content p{
+    font-weight: lighter;
+    font-size: 20px;
+
+}
 .intro p{
     font-size: large;
 }
