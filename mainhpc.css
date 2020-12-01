@@ -188,6 +188,7 @@ header {
 
 footer img {
   width: 125px;
+  float: right;
 }
 
 footer p {
@@ -203,6 +204,7 @@ footer {
 footer span {
   color: #b3aeb5;
   font-size: 20px;
-  text-align: center;
+  float: right;
+  padding-top: 90px;
 
 }
