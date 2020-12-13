@@ -54,3 +54,78 @@ html{
     margin-left:25px;
     margin-top:10px;
 }
+
+
+
+@media all and (max-width: 1280px) {
+    .top-wrapper h1 {
+      font-size: 32px;
+    }
+  
+    .heading h2 {
+      font-size: 20px;
+    }
+  
+    .up {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+    .col-2{
+        margin-left: 125px;
+    }
+    .logo{
+        margin-left: -75px;
+      }
+    .col-3{
+        margin-left: 125px;
+    }
+
+  }
+  
+  /* For Smartphones and tablets */
+  @media all and (max-width: 800px) {
+    .header-right {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+    .logo{
+      margin-left: -75px;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  
+  
+    .top-wrapper {
+      text-align: left;
+    }
+  
+    .top-wrapper h1 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    .top-wrapper p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  
+    .up {
+      width: 100%;
+    }
+  
+    footer {
+      text-align: center;
+    }
+    .col-2{
+        margin-left: 125px;
+    }
+    .col-3 p{
+        display:none;
+    }
+
+  }
