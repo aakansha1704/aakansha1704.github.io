@@ -1,4 +1,4 @@
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1280px) {
   .top-wrapper h1 {
     font-size: 32px;
   }
@@ -11,10 +11,13 @@
     width: 50%;
     margin-bottom: 50px;
   }
+  .logo{
+    margin-left: -75px;
+  }
 }
 
 /* For Smartphones */
-@media all and (max-width: 670px) {
+@media all and (max-width: 800px) {
   .header-right {
     display: none;
   }
@@ -30,9 +33,6 @@
     width: 100%;
   }
 
-  .facebook {
-    margin-bottom: 10px;
-  }
 
   .top-wrapper {
     text-align: left;
