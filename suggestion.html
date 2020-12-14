@@ -18,7 +18,14 @@ input[type=text], select, textarea {
   border-radius: 4px;
   resize: vertical;
 }
+input[type=email]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 
+}
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
@@ -75,7 +82,7 @@ input[type=submit]:hover {
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
@@ -108,10 +115,10 @@ input[type=submit]:hover {
   <form  action="https://send.pageclip.co/OvvSFcXTqaYMcwLsuDEGHm9IVzrxQG1t/Contact" class="pageclip-form" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="fname">First Name</label>
+        <label for="fname">Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name">
+        <input type="text" id="fname" name="firstname" required placeholder="Your name">
       </div>
     </div>
     <div class="row">
@@ -119,7 +126,7 @@ input[type=submit]:hover {
         <label for="eml">E-mail</label>
       </div>
       <div class="col-75">
-        <input type="text" id="eml" name="emailid" placeholder="example@gmail.com">
+        <input type="email" id="eml" name="emailid" placeholder="example@gmail.com">
       </div>
     </div>
     <div class="row">
@@ -140,7 +147,7 @@ input[type=submit]:hover {
         <label for="subject">Describe</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write here" style="height:200px"></textarea>
+        <textarea id="subject" name="subject" required placeholder="Write here" style="height:200px"></textarea>
       </div>
     </div>
     <div class="row">
