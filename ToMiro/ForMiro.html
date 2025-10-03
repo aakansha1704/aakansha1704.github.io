@@ -62,8 +62,6 @@ unmuteBtn.addEventListener('click', () => {
   }).catch(err => console.warn('Autoplay blocked:', err));
   unmuteBtn.style.display = 'none';
 });
-
-
 const card = document.getElementById('card');
 card.tabIndex = 0;
 card.addEventListener('keydown', (e) => {
@@ -72,8 +70,6 @@ card.addEventListener('keydown', (e) => {
     unmuteBtn.click();
   }
 });
-
-
 const speech = document.getElementById('speech');
 setTimeout(()=>{ speech.textContent = 'Half a year of us! <3' }, 6000);
 </script>
