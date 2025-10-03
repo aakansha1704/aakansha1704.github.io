@@ -1,0 +1,82 @@
+
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Happy 6 Months!</title>
+<style>
+:root { --bg: linear-gradient(135deg,#ffe6f0,#fff0e6); --card:#fff; --accent:#ff7fbf; }
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);font-family:Inter,system-ui,Arial,sans-serif}
+.card{width:min(720px,90vw);background:var(--card);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.12);padding:30px;display:flex;gap:20px;align-items:center;position:relative}
+.left{flex:0 0 180px;display:flex;align-items:left;justify-content:center;position:relative}
+.kirby{width:160px;height:160px;display:block;object-fit:contain;animation:jump 1s ease-in-out infinite}
+@keyframes jump{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-22px) scale(1.04)}100%{transform:translateY(0) scale(1)}}
+.speech{position:absolute;right:100%;top:6%;background:var(--accent);color:white;padding:12px 16px;border-radius:14px;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.12);transform-origin:left top;animation:pop .7s ease both}
+.speech:after{content:'';position:absolute;right:-12px;top:50%;transform:translateY(-50%);border:8px solid transparent;border-right-color:var(--accent)}
+@keyframes pop{0%{transform:scale(.6) translateY(-10px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
+.content{flex:1;padding:6px 12px}
+.h1{font-size:28px;margin:0 0 8px;color:#333}
+.p{margin:0 0 16px;color:#444}
+.big-heart{font-size:48px;color:#ff557f;margin-bottom:8px}
+.play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.unmute-btn{position:absolute;bottom:20px;right:20px;background:#ff557f;color:white;border:none;padding:10px 14px;border-radius:999px;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.12);pointer-events:auto}
+.small-note{font-size:12px;color:#666;margin-top:8px}
+.player{display:none}
+.footer{font-size:13px;color:#666;margin-top:10px}
+</style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="left">
+      <img id="kirby" class="kirby" src="Poyo.png" alt="Kirby bouncing">
+      <div class="speech" id="speech">Happy 6 months bb!</div>
+    </div>
+    <div class="content">
+      <div class="h1">Happy 6 Months Miro <3</div>
+      <div class="p">Ich bin froh, dass ich dich getroffen habe, my cutieee 💖   Ich vermisse dich :(</div>
+      <div class="big-heart">❤️</div>
+      <div class="small-note">(I tried making this autoplay but if it doesnt press the button for music hehe)</div>
+      <div class="footer">— Aaki</div>
+    </div>
+  
+    <button class="unmute-btn" id="unmuteBtn">▶ Play / Unmute</button>
+  </div>
+
+<audio id="bgMusic" loop>
+  <!-- Replace with your own MP3 file if you want a different song -->
+  <source src="https://ia801400.us.archive.org/20/items/pkmn-rgby-soundtrack/Disc%201/03%20-%20Pallet%20Town.mp3" type="audio/mpeg">
+  
+</audio>
+
+<script>
+const unmuteBtn = document.getElementById('unmuteBtn');
+const bgMusic = document.getElementById('bgMusic');
+
+unmuteBtn.addEventListener('click', () => {
+  bgMusic.play().then(() => {
+    console.log('Music playing');
+  }).catch(err => console.warn('Autoplay blocked:', err));
+  unmuteBtn.style.display = 'none';
+});
+
+/* Accessibility: allow keyboard play */
+const card = document.getElementById('card');
+card.tabIndex = 0;
+card.addEventListener('keydown', (e) => {
+  if (e.key === ' ' || e.key === 'Enter') {
+    e.preventDefault();
+    unmuteBtn.click();
+  }
+});
+
+
+const speech = document.getElementById('speech');
+setTimeout(()=>{ speech.textContent = 'Half a year of us! 🥺' }, 6000);
+</script>
+
+</body>
+</html>
