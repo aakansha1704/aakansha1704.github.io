@@ -37,7 +37,7 @@ body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:c
     </div>
     <div class="content">
       <div class="h1">Happy 6 Months Miro <3</div>
-      <div class="p">Ich bin froh, dass ich dich getroffen habe, my cutieee 💖   Ich vermisse dich :(</div>
+      <div class="p">Ich bin froh, dass ich dich getroffen habe, my cutieee 💖           Ich vermisse dich :(</div>
       <div class="big-heart">❤️</div>
       <div class="small-note">(I tried making this autoplay but if it doesnt press the button for music hehe)</div>
       <div class="footer">— Aaki</div>
@@ -47,7 +47,7 @@ body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:c
   </div>
 
 <audio id="bgMusic" loop>
-  <!-- Replace with your own MP3 file if you want a different song -->
+
   <source src="https://ia801400.us.archive.org/20/items/pkmn-rgby-soundtrack/Disc%201/03%20-%20Pallet%20Town.mp3" type="audio/mpeg">
   
 </audio>
@@ -63,7 +63,7 @@ unmuteBtn.addEventListener('click', () => {
   unmuteBtn.style.display = 'none';
 });
 
-/* Accessibility: allow keyboard play */
+
 const card = document.getElementById('card');
 card.tabIndex = 0;
 card.addEventListener('keydown', (e) => {
@@ -75,7 +75,7 @@ card.addEventListener('keydown', (e) => {
 
 
 const speech = document.getElementById('speech');
-setTimeout(()=>{ speech.textContent = 'Half a year of us! 🥺' }, 6000);
+setTimeout(()=>{ speech.textContent = 'Half a year of us! <3' }, 6000);
 </script>
 
 </body>
