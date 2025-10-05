@@ -7,6 +7,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Happy 6 Months!</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
 :root { --bg: linear-gradient(135deg,#ffe6f0,#fff0e6); --card:#fff; --accent:#ff7fbf; }
 *{box-sizing:border-box}
@@ -19,7 +20,7 @@ body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:c
 .speech:after{content:'';position:absolute;right:-12px;top:50%;transform:translateY(-50%);border:8px solid transparent;border-right-color:var(--accent)}
 @keyframes pop{0%{transform:scale(.6) translateY(-10px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
 .content{flex:1;padding:6px 12px}
-.h1{font-size:28px;margin:0 0 8px;color:#333}
+.h1{ font-family: 'Press Start 2P', cursive, system-ui, Arial, sans-serif; font-size:28px;margin:0 0 8px;color:rgb(218, 103, 160)}
 .p{margin:0 0 16px;color:#444}
 .big-heart{font-size:48px;color:#ff557f;margin-bottom:8px}
 .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
@@ -37,17 +38,17 @@ body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:c
     </div>
     <div class="content">
       <div class="h1">Happy 6 Months Miro <3</div>
-      <div class="p">Ich bin froh, dass ich dich getroffen habe, my cutieee 💖           Ich vermisse dich :(</div>
+      <div class="p">Ich bin froh, dass ich dich getroffen habe, my cutieee 💖<br>Ich vermisse dich :(</div>
       <div class="big-heart">❤️</div>
       <div class="small-note">(I tried making this autoplay but if it doesnt press the button for music hehe)</div>
       <div class="footer">— Aaki</div>
     </div>
   
-    <button class="unmute-btn" id="unmuteBtn">▶ Play / Unmute</button>
+    <button class="unmute-btn" id="unmuteBtn">▶ Play</button>
   </div>
 
 <audio id="bgMusic" loop>
-
+  <!-- Replace with your own MP3 file if you want a different song -->
   <source src="https://ia801400.us.archive.org/20/items/pkmn-rgby-soundtrack/Disc%201/03%20-%20Pallet%20Town.mp3" type="audio/mpeg">
   
 </audio>
@@ -62,6 +63,8 @@ unmuteBtn.addEventListener('click', () => {
   }).catch(err => console.warn('Autoplay blocked:', err));
   unmuteBtn.style.display = 'none';
 });
+
+/* Accessibility: allow keyboard play */
 const card = document.getElementById('card');
 card.tabIndex = 0;
 card.addEventListener('keydown', (e) => {
@@ -70,8 +73,10 @@ card.addEventListener('keydown', (e) => {
     unmuteBtn.click();
   }
 });
+
+
 const speech = document.getElementById('speech');
-setTimeout(()=>{ speech.textContent = 'Half a year of us! <3' }, 6000);
+setTimeout(()=>{ speech.textContent = 'Half a year of us! 🥺' }, 6000);
 </script>
 
 </body>
