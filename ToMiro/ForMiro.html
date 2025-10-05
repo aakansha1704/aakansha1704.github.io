@@ -41,14 +41,14 @@ body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:c
       <div class="p">Ich bin froh, dass ich dich getroffen habe, my cutieee 💖<br>Ich vermisse dich :(</div>
       <div class="big-heart">❤️</div>
       <div class="small-note">(I tried making this autoplay but if it doesnt press the button for music hehe)</div>
-      <div class="footer">— Aaki</div>
+      <div class="footer">- Aaki</div>
     </div>
   
     <button class="unmute-btn" id="unmuteBtn">▶ Play</button>
   </div>
 
 <audio id="bgMusic" loop>
-  <!-- Replace with your own MP3 file if you want a different song -->
+
   <source src="https://ia801400.us.archive.org/20/items/pkmn-rgby-soundtrack/Disc%201/03%20-%20Pallet%20Town.mp3" type="audio/mpeg">
   
 </audio>
@@ -64,7 +64,7 @@ unmuteBtn.addEventListener('click', () => {
   unmuteBtn.style.display = 'none';
 });
 
-/* Accessibility: allow keyboard play */
+
 const card = document.getElementById('card');
 card.tabIndex = 0;
 card.addEventListener('keydown', (e) => {
